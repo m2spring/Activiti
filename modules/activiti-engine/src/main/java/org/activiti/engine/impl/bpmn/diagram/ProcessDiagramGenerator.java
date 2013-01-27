@@ -275,6 +275,15 @@ public class ProcessDiagramGenerator {
       }
     });
 
+    // jenkins task
+    activityDrawInstructions.put("jenkinsTask", new ActivityDrawInstruction() {
+
+      public void draw(ProcessDiagramCanvas processDiagramCreator, ActivityImpl activityImpl) {
+        processDiagramCreator.drawScriptTask((String) activityImpl.getProperty("name"), activityImpl.getX(), activityImpl.getY(), activityImpl.getWidth(),
+                activityImpl.getHeight());
+      }
+    });
+
   }
 
   /**

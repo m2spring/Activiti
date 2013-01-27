@@ -94,6 +94,9 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
     
     // boundary events
     BoundaryEventJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
+    
+    // Jenkins task
+    JenkinsTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
   }
   
   private static final List<String> DI_CIRCLES = new ArrayList<String>();

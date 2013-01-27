@@ -381,6 +381,32 @@
       "popular" : true
     } ]
   }, {
+    "name" : "jenkinstaskbase",
+    "properties" : [ {
+      "id" : "job_name",
+      "type" : "String",
+      "title" : "Job Name",
+      "value" : "",
+      "description" : "Name of the Jenkins job to execute.",
+      "popular" : true
+    }, {
+      "id" : "is_manual_job_launch_mode",
+      "type" : "Choice",
+      "title" : "Manual Job Launch",
+      "value" : "No",
+      "description" : "In manual job launch mode, the user needs to manually launch the Jenkins job.",
+      "popular" : true,
+      "items" : [ {
+        "id" : "no",
+        "title" : "No",
+        "value" : "No"
+      }, {
+        "id" : "yes",
+        "title" : "Yes",
+        "value" : "Yes"
+      } ]
+    } ]
+  }, {
     "name" : "ruletaskbase",
     "properties" : [ {
       "id" : "ruletask_class",
@@ -1244,6 +1270,16 @@
     "groups" : [ "Artifacts" ],
     "propertyPackages" : [ "elementbase", "baseattributes", "textannotationbase" ],
     "roles" : [ "all" ]
+  }, {
+    "type" : "node",
+    "id" : "JenkinsTask",
+    "title" : "Jenkins task",
+    "description" : "Executes a Jenkins job",
+    "view" : "jenkins/jenkinstask.svg",
+    "icon" : "jenkins/jenkins.png",
+    "groups" : [ "Jenkins" ],
+    "propertyPackages" : [ "elementbase", "baseattributes", "jenkinstaskbase" ],
+    "roles" : [ "sequence_start", "Activity", "sequence_end", "ActivitiesMorph", "all" ]
   } ],
   "rules" : {
     "cardinalityRules" : [ {
