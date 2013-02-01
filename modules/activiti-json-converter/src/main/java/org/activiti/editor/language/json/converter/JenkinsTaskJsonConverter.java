@@ -77,6 +77,7 @@ public class JenkinsTaskJsonConverter extends BaseBpmnJsonConverter {
         f2.setStringValue(Boolean.toString(getPropertyValueAsBoolean(JSON_JENKINSTASK_MANUAL_LAUNCH_MODE, elementNode)));
         task.getFieldExtensions().add(f2);
 
+        convertJsonToFormProperties(elementNode, task);
 		return task;
 	}
 }
