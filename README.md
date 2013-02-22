@@ -3,4 +3,4 @@ Activiti
 
 Activiti is a light-weight workflow and Business Process Management (BPM) Platform targeted at business people, developers and system admins. Its core is a super-fast and rock-solid BPMN 2 process engine for Java. It's open-source and distributed under the Apache license. Activiti runs in any Java application, on a server, on a cluster or in the cloud. It integrates perfectly with Spring, it is extremely lightweight and based on simple concepts. 
 
-This is the jenkow branch which brings in a the Jenkins Task into the Modeler.
+This is the jenkow branch which brings in the Jenkins Task into the Modeler.
